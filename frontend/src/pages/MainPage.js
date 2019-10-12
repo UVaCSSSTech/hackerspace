@@ -1,16 +1,16 @@
 import React from 'react';
-import Header from '../components/Header'
 import GoogleAuth from '../components/GoogleAuth';
 import PhotoSlider from '../components/PhotoSlider';
 
 import csssfamily from '../assets/images/csssfamily.JPG';
 
-function TeamPage() {
+function MainPage() {
   return (
-    <div className="TeamPage">
+    <div className="MainPage">
       <PhotoSlider />
       <GoogleAuth />
     </div>
   );
 }
-export default TeamPage;
+
+export default MainPage;
