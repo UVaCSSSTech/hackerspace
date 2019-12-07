@@ -1,25 +1,17 @@
 import React from 'react';
+import {Form, Container, Header} from 'semantic-ui-react'
 
 export default class SubscribeUs extends React.Component{
     render() {
         return(
-            <body>
-            <form>
-                <fieldset>
-                    <legend>Subscribe to our newsletters</legend>
-                    <p>
-                    <label>Your Name</label>
-                    <input type = "text"
-                           name = "subscriberName" />
-                    </p>
-                    <p>
-                    <label>Email Address</label>
-                    <input type = "text"
-                           name = "subscriberEmail" />
-                    </p>
-                </fieldset>
-            </form>
-            </body>
+          <Container>
+            <Header textAlign='center' as='h1'>Subscribe to our newsletter</Header>
+            <Form>
+              <Form.Field>
+                <input placeholder='Your Email Address'/>
+              </Form.Field>
+            </Form>
+          </Container>
         );
     }
 }
