@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {Component} from 'react';
+import {Button, Menu, Container} from 'semantic-ui-react'
 import logo from '../assets/images/cssslogo.png'
 
 import {
@@ -10,40 +11,66 @@ import {
 
 import MainPage from '../pages/MainPage'
 import TeamPage from '../pages/TeamPage'
+import SignupPage from '../pages/SignupPage'
+
+
+class Navbar extends Component {
+  state = {}
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
+  render() {
+    const { activeItem } = this.state
+
+    return (
+      <Container>
+      <Menu>
+        <Menu.Item header> UVaCSSS </Menu.Item>
+        <Menu.Item
+          name='about_us'
+          active={activeItem === 'about_us'}
+          onClick={this.handleItemClick}
+        >
+          About Us
+        </Menu.Item>
+
+        <Menu.Item
+          name='our_team'
+          active={activeItem === 'our_team'}
+          onClick={this.handleItemClick}
+        >
+          Our Team
+        </Menu.Item>
+
+        <Menu.Item position='right'>
+          <Button> Log in with UVa Email </Button>
+        </Menu.Item>
+      </Menu>
+      </Container>
+    )
+  }
+}
 
 export default class Header extends React.Component {
   render() {
     return (
       <header className="site-navbar pt-3" role="banner">
-        <div className="logo-container">
-          <img src={logo} className="App-logo" alt="logo" />
-        </div>
+        <Container>
+            <img src={logo} className="App-logo" alt="logo" />
+        </Container>
+
         <Router>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                <a class="navbar-brand" href="about">UVACSSS</a>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="team">Team</a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Activities</a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Technology</a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Latest</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
+          <Navbar></Navbar>
+          <div class="ui menu">
+              <div class="header item"> UVaCSSS </div>
+              <a class="item active"> About Us </a>
+              <a class="item"> Our Team</a>
+              <a class="item"> Login </a>
+          </div>
           <Switch>
-            <Route path="/"><MainPage /></Route>
-            <Route path="/team"> <TeamPage /> </Route>
+            <Route exact path="/" component={MainPage}></Route>
+            <Route exact path="/team" component={TeamPage}></Route>
+            <Route exact path='/signup' component={SignupPage}></Route>
           </Switch>
         </Router>
             {/* </div> */}
