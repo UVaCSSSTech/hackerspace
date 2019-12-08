@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import {Button, Menu, Container} from 'semantic-ui-react'
+<<<<<<< HEAD
 import logo from '../assets/images/cssslogo_white.png'
+=======
+import logo from '../assets/images/cssslogo.png'
+>>>>>>> fe86725630f3b168ca10bc58fd31974435e4a1d5
 
 import {
   BrowserRouter as Router,
@@ -29,8 +33,11 @@ class Navbar extends Component {
         <Menu.Item
           name='about_us'
           active={activeItem === 'about_us'}
+<<<<<<< HEAD
           as={Link}
           to='/'
+=======
+>>>>>>> fe86725630f3b168ca10bc58fd31974435e4a1d5
           onClick={this.handleItemClick}
         >
           About Us
@@ -39,12 +46,19 @@ class Navbar extends Component {
         <Menu.Item
           name='our_team'
           active={activeItem === 'our_team'}
+<<<<<<< HEAD
           as={Link}
           to='/team'
+=======
+>>>>>>> fe86725630f3b168ca10bc58fd31974435e4a1d5
           onClick={this.handleItemClick}
         >
           Our Team
         </Menu.Item>
+<<<<<<< HEAD
+=======
+
+>>>>>>> fe86725630f3b168ca10bc58fd31974435e4a1d5
         <Menu.Item position='right'>
           <Button> Log in with UVa Email </Button>
         </Menu.Item>
@@ -58,14 +72,28 @@ export default class Header extends React.Component {
   render() {
     return (
       <header className="site-navbar pt-3" role="banner">
+<<<<<<< HEAD
         <Container className="logo-container">
+=======
+        <Container>
+>>>>>>> fe86725630f3b168ca10bc58fd31974435e4a1d5
             <img src={logo} className="App-logo" alt="logo" />
         </Container>
 
         <Router>
+<<<<<<< HEAD
           <Navbar>
           </Navbar>
 
+=======
+          <Navbar></Navbar>
+          <div class="ui menu">
+              <div class="header item"> UVaCSSS </div>
+              <a class="item active"> About Us </a>
+              <a class="item"> Our Team</a>
+              <a class="item"> Login </a>
+          </div>
+>>>>>>> fe86725630f3b168ca10bc58fd31974435e4a1d5
           <Switch>
             <Route exact path="/" component={MainPage}></Route>
             <Route exact path="/team" component={TeamPage}></Route>
