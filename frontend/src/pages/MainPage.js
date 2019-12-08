@@ -10,10 +10,6 @@ function MainPage() {
   return (
     <div className="MainPage">
       <PhotoSlider />
-<<<<<<< HEAD
-=======
-      <GoogleAuth />
->>>>>>> fe86725630f3b168ca10bc58fd31974435e4a1d5
       <SubscribeUs />
     </div>
   );

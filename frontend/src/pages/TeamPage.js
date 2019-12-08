@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-<<<<<<< HEAD
 import { Button, Container, Menu, Image, Header} from 'semantic-ui-react'
 
 import { Link } from "react-router-dom";
@@ -26,11 +25,6 @@ class TeamInfo extends Component {
   }
 }
 
-=======
-import { Button, Container, Menu} from 'semantic-ui-react'
-import Header from '../components/Header'
-
->>>>>>> fe86725630f3b168ca10bc58fd31974435e4a1d5
 class TeamMenu extends Component {
   state = { activeItem: 'home' }
 
@@ -46,17 +40,13 @@ class TeamMenu extends Component {
             name='Overview'
             active={activeItem === 'Overview'}
             onClick={this.handleItemClick}
-<<<<<<< HEAD
             as={Link}
             to='/team'
-=======
->>>>>>> fe86725630f3b168ca10bc58fd31974435e4a1d5
           />
           <Menu.Item
             name='Presidential Board'
             active={activeItem === 'Presidential Board'}
             onClick={this.handleItemClick}
-<<<<<<< HEAD
             as={Link}
             to='/team/prediential_board'
           />
@@ -66,19 +56,11 @@ class TeamMenu extends Component {
             onClick={this.handleItemClick}
             as={Link}
             to='/team/publicity'
-=======
-          />
-          <Menu.Item
-            name="Publicity"
-            active={activeItem === 'Presidential Board'}
-            onClick={this.handleItemClick}
->>>>>>> fe86725630f3b168ca10bc58fd31974435e4a1d5
           />
           <Menu.Item
             name='Outreach'
             active={activeItem === 'Outreach'}
             onClick={this.handleItemClick}
-<<<<<<< HEAD
             to='/team/outreach'
           />
           <Menu.Item
@@ -86,13 +68,6 @@ class TeamMenu extends Component {
             active={activeItem === 'Technology'}
             onClick={this.handleItemClick}
             to='/team/technology'
-=======
-          />
-          <Menu.Item
-            name='Techonology'
-            active={activeItem === 'Technology'}
-            onClick={this.handleItemClick}
->>>>>>> fe86725630f3b168ca10bc58fd31974435e4a1d5
           />
         </Menu>
       </div>
@@ -104,10 +79,7 @@ function TeamPage() {
   return (
       <Container>
       <TeamMenu></TeamMenu>
-<<<<<<< HEAD
       <TeamInfo />
-=======
->>>>>>> fe86725630f3b168ca10bc58fd31974435e4a1d5
       </Container>
   );
 }

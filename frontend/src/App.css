@@ -13,6 +13,18 @@
   background-color: #AE3F41;
 }
 
+.img-slider {
+  width : 800px;
+  height : 600px;
+}
+
+.carousel-size {
+  display : 'flex';
+  align-items : 'center';
+  width : 800px;
+}
+
+
 /* .App-header {
   background-color: #282c34;
   min-height: 100vh;
