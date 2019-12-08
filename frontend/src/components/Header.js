@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Button, Menu, Container} from 'semantic-ui-react'
-import logo from '../assets/images/cssslogo.png'
+import logo from '../assets/images/cssslogo_white.png'
 
 import {
   BrowserRouter as Router,
@@ -29,6 +29,8 @@ class Navbar extends Component {
         <Menu.Item
           name='about_us'
           active={activeItem === 'about_us'}
+          as={Link}
+          to='/'
           onClick={this.handleItemClick}
         >
           About Us
@@ -37,11 +39,12 @@ class Navbar extends Component {
         <Menu.Item
           name='our_team'
           active={activeItem === 'our_team'}
+          as={Link}
+          to='/team'
           onClick={this.handleItemClick}
         >
           Our Team
         </Menu.Item>
-
         <Menu.Item position='right'>
           <Button> Log in with UVa Email </Button>
         </Menu.Item>
@@ -55,18 +58,14 @@ export default class Header extends React.Component {
   render() {
     return (
       <header className="site-navbar pt-3" role="banner">
-        <Container>
+        <Container className="logo-container">
             <img src={logo} className="App-logo" alt="logo" />
         </Container>
 
         <Router>
-          <Navbar></Navbar>
-          <div class="ui menu">
-              <div class="header item"> UVaCSSS </div>
-              <a class="item active"> About Us </a>
-              <a class="item"> Our Team</a>
-              <a class="item"> Login </a>
-          </div>
+          <Navbar>
+          </Navbar>
+
           <Switch>
             <Route exact path="/" component={MainPage}></Route>
             <Route exact path="/team" component={TeamPage}></Route>

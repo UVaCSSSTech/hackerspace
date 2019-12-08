@@ -12,12 +12,6 @@ export default class PhotoSlider extends React.Component {
             <div className="carousel-item active">
               <img className="d-block w-100" src="/assets/images/csssfamily.JPG" alt="First slide"/>
             </div>
-            <div className="carousel-item">
-              <img className="d-block w-100" src="/assets/images/cssslogo.png" alt="Second slide"/>
-            </div>
-            <div className="carousel-item">
-              <img className="d-block w-100" src="/assets/images/cssslogo.png" alt="Third slide" />
-            </div>
           </div>
           <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
