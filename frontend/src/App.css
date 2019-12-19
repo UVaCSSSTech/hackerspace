@@ -3,14 +3,24 @@
 }
 
 .App-logo {
-  height: 20vmin;
+  position: relative;
+  height: 25vmin;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding-top : 20px;
+  padding-bottom : 20px;
+}
+
+.App-footer {
+  height : 20vmin;
+  margin-top: 5vh;
+  background-color: #AE3F41;
 }
 
 .logo-container{
   background-color: #AE3F41;
+  height : 200px;
 }
 
 .img-slider {
@@ -19,9 +29,8 @@
 }
 
 .carousel-size {
-  display : 'flex';
-  align-items : 'center';
-  width : 800px;
+  align-items : center;
+  width : 50%;
 }
 
 

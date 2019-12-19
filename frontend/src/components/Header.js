@@ -58,12 +58,12 @@ export default class Header extends React.Component {
   render() {
     return (
       <header className="site-navbar pt-3" role="banner">
-        <Container className="logo-container">
+        <Container className="logo-container" fluid>
             <img src={logo} className="App-logo" alt="logo" />
         </Container>
 
         <Router>
-          <Navbar>
+          <Navbar className='App-navbar'>
           </Navbar>
 
           <Switch>
@@ -72,11 +72,6 @@ export default class Header extends React.Component {
             <Route exact path='/signup' component={SignupPage}></Route>
           </Switch>
         </Router>
-            {/* </div> */}
-            <div className="social-icons d-inline">
-                  <a href=""><span className="icon-facebook"></span></a>
-                  <a href="https://www.instagram.com/uvacsss/"><span className="icon-instagram"></span></a>
-            </div>
       </header>
     );
   }

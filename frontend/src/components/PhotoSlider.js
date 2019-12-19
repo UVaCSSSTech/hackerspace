@@ -35,13 +35,17 @@ export default class PhotoSlider extends React.Component {
   ]
   sliderItems = []
 
+  // Avoid duplicate rendering
+  shouldComponentUpdate(nextProps, nextState) {
+    return false;
+  }
+
   render() {
     for (var i = 0; i < this.imgs.length; i++) {
       this.sliderItems.push(<PhotoSliderItem img={this.imgs[i]} active={i == 0} />)
     }
 
     return (
-      <Container>
         <div id="carouselExampleControls" className="carousel slide carousel-size" data-ride="carousel">
           <div className="carousel-inner">
             {this.sliderItems}
@@ -55,7 +59,6 @@ export default class PhotoSlider extends React.Component {
             <span className="sr-only">Next</span>
           </a>
         </div>
-      </Container>
     );
   }
 }
