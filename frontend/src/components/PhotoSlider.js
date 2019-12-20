@@ -28,6 +28,7 @@ class PhotoSliderItem extends React.Component {
 // TO-Do Reactify this carousel with react-bootstrap
 // See https://react-bootstrap.github.io/components/carousel/ for reference
 
+
 export default class PhotoSlider extends React.Component {
   imgs = [
     '/assets/images/csssfamily.JPG',
@@ -42,23 +43,21 @@ export default class PhotoSlider extends React.Component {
 
   render() {
     for (var i = 0; i < this.imgs.length; i++) {
-      this.sliderItems.push(<PhotoSliderItem img={this.imgs[i]} active={i == 0} />)
+      this.sliderItems.push(
+      <Carousel.Item>
+        <img 
+          src={this.imgs[i]}
+          width={1000}
+          height={500}
+        />
+      </Carousel.Item>)
     }
-
     return (
-        <div id="carouselExampleControls" className="carousel slide carousel-size" data-ride="carousel">
-          <div className="carousel-inner">
-            {this.sliderItems}
-          </div>
-          <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="sr-only">Previous</span>
-          </a>
-          <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="sr-only">Next</span>
-          </a>
-        </div>
+      <Carousel>
+        {this.sliderItems}
+      </Carousel>
     );
   }
 }
+
+
