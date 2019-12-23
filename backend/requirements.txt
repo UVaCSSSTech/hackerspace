@@ -70,7 +70,7 @@ entrypoints==0.2.2
 et-xmlfile==1.0.1
 fastcache==1.0.2
 filelock==2.0.7
-Flask==0.12.2
+Flask==1.0
 Flask-Cors==3.0.2
 floyd-cli==0.10.29
 future==0.16.0
