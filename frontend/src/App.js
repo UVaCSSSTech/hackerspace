@@ -18,6 +18,7 @@ function App() {
     <div className="app">
       <Header />
       <Footer />
+      <GoogleAuth />
     </div>
   );
 }

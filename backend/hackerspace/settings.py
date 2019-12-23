@@ -26,7 +26,11 @@ SECRET_KEY = 'mn3s^u6=4_=erho5qw)drvp)fx8b@n50d@#8as7rtyihc@gox5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'uvacsss-env.wzhzkybkgp.us-east-1.elasticbeanstalk.com',
+    '127.0.0.1',
+    'localhost',
+]
 
 
 # Application definition
@@ -116,6 +120,8 @@ DATABASES = {
 }
 
 
+AUTH_USER_MODEL = 'api.User'
+
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
@@ -133,6 +139,10 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+JWT_AUTH = {
+    'JWT_RESPONSE_PAYLOAD_HANDLER' :   'api.utils.custom_jwt_response_handler'
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
@@ -154,3 +164,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 CLIENT_ID="466266907891-5k904n3kaqqnuolsn2269fujv33tn5bf.apps.googleusercontent.com"
+
+LOGIN_URL = '/auth/login/google-oauth2/'
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
