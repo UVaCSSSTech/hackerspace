@@ -6,16 +6,8 @@ import {
   Link
 } from "react-router-dom";
 
-<<<<<<< HEAD:frontend/src/components/Header.js
-import MainPage from '../pages/MainPage'
-import TeamPage from '../pages/TeamPage'
-import SignupPage from '../pages/SignupPage'
-
-class Navbar extends Component {
-=======
 
 export default class Navbar extends Component {
->>>>>>> 3591bc321f71c0218c8f6beb8f97889ded61ef7a:frontend/src/components/Navbar.js
   state = {}
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })

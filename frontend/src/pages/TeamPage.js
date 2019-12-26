@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Button, Container, Menu, Image, Header} from 'semantic-ui-react'
-
+import Profile from '../components/Profile.js';
 import { Link } from "react-router-dom";
 
 class TeamInfo extends Component {
@@ -80,6 +80,7 @@ function TeamPage() {
       <Container>
       <TeamMenu></TeamMenu>
       <TeamInfo />
+      <Profile />
       </Container>
   );
 }

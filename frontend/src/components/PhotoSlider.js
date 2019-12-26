@@ -12,13 +12,13 @@ class PhotoSliderItem extends React.Component {
     if (this.props.active) {
       return (
         <div className="carousel-item active">
-          <img className="d-block img-slider" src={this.props.img}/>
+          <img className="d-block img-slider" src={this.props.img} alt=""/>
         </div>
       )
     } else {
       return (
         <div className="carousel-item">
-          <img className="d-block img-slider" src={this.props.img}/>
+          <img className="d-block img-slider" src={this.props.img} alt=""/>
         </div>
       )
     }
@@ -49,6 +49,7 @@ export default class PhotoSlider extends React.Component {
           src={this.imgs[i]}
           width={1000}
           height={500}
+          alt=""
         />
       </Carousel.Item>)
     }
