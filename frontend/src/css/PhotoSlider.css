@@ -1,3 +1,7 @@
-.container{
-    width: 100%;
+.carousel-item{
+    width: 80%;
+    padding-top : 20px;
+    padding-bottom: 20px; 
+    left: 10%;
+    right: 10%;
 }
