@@ -13,11 +13,14 @@ import MainPage from '../pages/MainPage'
 import TeamPage from '../pages/TeamPage'
 import SignupPage from '../pages/SignupPage'
 
-
 class Navbar extends Component {
   state = {}
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
+  handleLogin() {
+    window.open('http://localhost:8000/auth/login/google-oauth2')
+  }
 
   render() {
     const { activeItem } = this.state
@@ -46,7 +49,7 @@ class Navbar extends Component {
           Our Team
         </Menu.Item>
         <Menu.Item position='right'>
-          <Button> Log in with UVa Email </Button>
+          <Button onClick={this.handleLogin}> Log in with UVa Email </Button>
         </Menu.Item>
       </Menu>
       </Container>

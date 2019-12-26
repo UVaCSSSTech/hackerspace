@@ -102,8 +102,10 @@ TEMPLATES = [
 ]
 
 AUTHENTICATION_BACKENDS = (
-   'rest_framework_social_oauth2.backends.DjangoOAuth2',
-   'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.google.GooglePlusAuth',
+    'social_core.backends.google.GoogleOAuth2',
+    'rest_framework_social_oauth2.backends.DjangoOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
 )
 
 WSGI_APPLICATION = 'hackerspace.wsgi.application'
@@ -163,9 +165,23 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CLIENT_ID="466266907891-5k904n3kaqqnuolsn2269fujv33tn5bf.apps.googleusercontent.com"
+#LOGIN_URL = '/auth/login/google-oauth2/'
 
-LOGIN_URL = '/auth/login/google-oauth2/'
-
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/api'
 LOGOUT_REDIRECT_URL = '/'
+
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+DRFSO2_PROPRIETARY_BACKEND_NAME = 'Google'
+DRFSO2_URL_NAMESPACE = 'social'
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '466266907891-7po98cmg691r0onvv6nvqb7btcrve1tt.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'C_eLoeNToa4y_2Aazw4wyC3r'
+
+SOCIAL_AUTH_GOOGLE_PLUS_KEY = '466266907891-7po98cmg691r0onvv6nvqb7btcrve1tt.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_PLUS_SECRET = 'C_eLoeNToa4y_2Aazw4wyC3r'
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [
+    'https://www.googleapis.com/auth/userinfo.email',
+    'https://www.googleapis.com/auth/userinfo.profile',
+]

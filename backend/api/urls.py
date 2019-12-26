@@ -8,5 +8,8 @@ router = routers.DefaultRouter()
 urlpatterns = [
     path('api/', include(router.urls)),
     path(r'^api/users/(?P<pk>[0-9]+)$', views.user_detail),
-    path('auth/', views.validate_google_auth),
+    #path('google-auth/', views.GoogleAuthView.as_view())
+    #path('auth/', views.register_by_access_token),
+    # path('users/', views.UserList.as_view()),
+    # path('users/<int:pk>', views.UserDetail.as_view()),
 ]

@@ -12,21 +12,23 @@ function onSignIn(googleUser) {
   const instance = axios.create({baseURL: 'http://localhost:8000'})
 
   var data = querystring.stringify({
-                "token": id_token,
+                "id_token": id_token,
             });
-  instance.post('auth/', data).then(
+  console.log(id_token)
+  instance.post('auth/complete/google-plus/', data).then(
     function(response) {
       console.log(response)
       window.location.replace("http://localhost:3000/signup");
     }
   )
+  //window.open('http://localhost:8000/auth/login/google-oauth2')
 }
 
 export default class GoogleAuth extends React.Component {
   render() {
     return (
       <GoogleLogin
-        clientId="466266907891-5k904n3kaqqnuolsn2269fujv33tn5bf.apps.googleusercontent.com"
+        clientId="466266907891-7po98cmg691r0onvv6nvqb7btcrve1tt.apps.googleusercontent.com"
         buttonText="Login with your UVa email"
         onSuccess={onSignIn}
         cookiePolicy={'single_host_origin'}
