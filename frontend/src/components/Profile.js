@@ -1,6 +1,8 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card'
-import CardColumns from 'react-bootstrap/CardColumns'
+import "../css/Profile.css"
+import {Image, Container} from 'semantic-ui-react'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 export default class Profile extends React.Component{
     info = {
         "张家恺" : {
@@ -11,42 +13,25 @@ export default class Profile extends React.Component{
         },
         "XXX":{
             intro: "This is who I am.",
-            img:"/assets/images/cssslogo.png"
+            img:"/assets/images/team/sijuntan.jpg"
         }
       }
     render(){
         return(
-            <CardColumns>
-                <Card>
-                    <Card.Img variant="top" src={this.info["张家恺"].img} />
-                    <Card.Body>
-                        <Card.Title>张家恺</Card.Title>
-                        <Card.Text>{this.info["张家恺"].intro}</Card.Text>
-                    </Card.Body>
-                </Card>
-                <Card>
-                    <Card.Img variant="top" src={this.info["XXX"].img} />
-                    <Card.Body>
-                        <Card.Title>XXX</Card.Title>
-                        <Card.Text>{this.info["XXX"].intro}</Card.Text>
-                    </Card.Body>
-                </Card>
-                <Card>
-                    <Card.Img variant="top" src={this.info["XXX"].img} />
-                    <Card.Body>
-                        <Card.Title>XXX</Card.Title>
-                        <Card.Text>{this.info["XXX"].intro}</Card.Text>
-                    </Card.Body>
-                </Card>
-                <Card>
-                    <Card.Img variant="top" src={this.info["张家恺"].img} />
-                    <Card.Body>
-                        <Card.Title>张家恺</Card.Title>
-                        <Card.Text>{this.info["张家恺"].intro}</Card.Text>
-                    </Card.Body>
-                </Card>
-            </CardColumns>
-            
+            <Container>
+                <Container id="border">
+                <Row>
+                    <Col xs={4}><img src={this.info["张家恺"].img} id="img"/></Col>
+                    <Col id="content"><p>{ this.info["张家恺"].intro }</p></Col>
+                </Row>
+                </Container>
+                <Container id="border">
+                <Row>
+                    <Col xs={4}><img src={this.info["XXX"].img} id="img"/></Col>
+                    <Col id="content"><p>{ this.info["XXX"].intro }</p></Col>
+                </Row>
+                </Container>
+            </Container>
         );
     }
 }
