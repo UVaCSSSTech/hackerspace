@@ -5,6 +5,53 @@ import { Link } from "react-router-dom";
 
 class TeamInfo extends Component {
 
+  presidential_board = [
+    {
+      name : "张家恺",
+      intro : "我是来自北京的张家恺，目前就读于文理学院。很高兴能在新的一学年继续在CSSS \
+      为大家服务，在接下来一学年，希望可以为职业发展项目打下坚实的基础，为在UVA的中国留学生 \
+      群体提供不同领域的求职帮助。长期人生理想是开一家做粤菜的酒馆。",
+      img : "/assets/images/cssslogo.png"
+    },
+    {
+      name : "xxx",
+      intro : "",
+      img : "/assets/images/cssslogo.png"
+    },
+  ]
+
+  tech = [
+
+  ]
+
+  publicity = [
+    {
+      name : "张家恺",
+      intro : "",
+      img : "/assets/images/cssslogo.png"
+    },
+  ]
+
+  activity = [
+
+  ]
+
+  outreach = [
+
+  ]
+
+  culture = [
+
+  ]
+
+  career  = [
+    {
+      name : "张家恺",
+      intro : "",
+      img : "/assets/images/cssslogo.png"
+    }
+  ]
+
   info = {
     "张家恺" : {
       intro : "我是来自北京的张家恺，目前就读于文理学院。很高兴能在新的一学年继续在CSSS \
@@ -48,7 +95,7 @@ class TeamMenu extends Component {
             active={activeItem === 'Presidential Board'}
             onClick={this.handleItemClick}
             as={Link}
-            to='/team/prediential_board'
+            to='/team/presidential_board'
           />
           <Menu.Item
             name="Publicity"

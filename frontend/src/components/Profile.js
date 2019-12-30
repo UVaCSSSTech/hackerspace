@@ -3,7 +3,10 @@ import "../css/Profile.css"
 import {Image, Container} from 'semantic-ui-react'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
+
 export default class Profile extends React.Component{
+
     info = {
         "张家恺" : {
           intro : "我是来自北京的张家恺，目前就读于文理学院。很高兴能在新的一学年继续在CSSS \
