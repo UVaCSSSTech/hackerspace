@@ -3,8 +3,6 @@ import "../css/Profile.css"
 import {Image, Container} from 'semantic-ui-react'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
-
 export default class Profile extends React.Component{
 
     info = {
@@ -19,6 +17,7 @@ export default class Profile extends React.Component{
             img:"/assets/images/team/sijuntan.jpg"
         }
       }
+    
     render(){
         return(
             <Container>
