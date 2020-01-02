@@ -6,9 +6,6 @@ import {
   Link
 } from "react-router-dom";
 
-import MainPage from '../pages/MainPage'
-import TeamPage from '../pages/TeamPage'
-import SignupPage from '../pages/SignupPage'
 
 
 export default class Navbar extends Component {
