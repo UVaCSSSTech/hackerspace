@@ -102,7 +102,7 @@ TEMPLATES = [
 ]
 
 AUTHENTICATION_BACKENDS = (
-    'social_core.backends.google.GooglePlusAuth',
+    #'social_core.backends.google.GooglePlusAuth',
     'social_core.backends.google.GoogleOAuth2',
     'rest_framework_social_oauth2.backends.DjangoOAuth2',
     'django.contrib.auth.backends.ModelBackend',
@@ -173,7 +173,7 @@ LOGOUT_REDIRECT_URL = '/'
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
 DRFSO2_PROPRIETARY_BACKEND_NAME = 'Google'
-DRFSO2_URL_NAMESPACE = 'social'
+DRFSO2_URL_NAMESPACE = 'auth'
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '466266907891-7po98cmg691r0onvv6nvqb7btcrve1tt.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'C_eLoeNToa4y_2Aazw4wyC3r'
