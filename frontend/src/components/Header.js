@@ -12,8 +12,6 @@ import {
 import MainPage from '../pages/MainPage'
 import TeamPage from '../pages/TeamPage'
 import SignupPage from '../pages/SignupPage'
-import TechTeam from '../pages/TechTeam'
-import CultureTeam from '../pages/CultureTeam'
 
 class Navbar extends Component {
   state = {}
@@ -73,8 +71,6 @@ export default class Header extends React.Component {
             <Route exact path="/" component={MainPage}></Route>
             <Route exact path="/team" component={TeamPage}></Route>
             <Route exact path='/signup' component={SignupPage}></Route>
-            <Route exact path="/team/technology" component={TechTeam}></Route>
-            <Route exact path="/team/culture" component={CultureTeam}></Route>
           </Switch>
         </Router>
       </header>
