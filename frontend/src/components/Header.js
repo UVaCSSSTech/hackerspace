@@ -9,9 +9,12 @@ import {
   Link
 } from "react-router-dom";
 
+import GoogleAuth from './GoogleAuth'
+
 import MainPage from '../pages/MainPage'
 import TeamPage from '../pages/TeamPage'
 import SignupPage from '../pages/SignupPage'
+
 
 class Navbar extends Component {
   state = {}
@@ -49,7 +52,7 @@ class Navbar extends Component {
           Our Team
         </Menu.Item>
         <Menu.Item position='right'>
-          <Button onClick={this.handleLogin}> Log in with UVa Email </Button>
+          <GoogleAuth/>
         </Menu.Item>
       </Menu>
       </Container>

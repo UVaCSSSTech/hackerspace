@@ -1,4 +1,4 @@
-from django.urls import path, include
+from django.urls import path, re_path, include
 from rest_framework import routers
 from . import views
 
@@ -7,7 +7,8 @@ router = routers.DefaultRouter()
 
 urlpatterns = [
     path('api/', include(router.urls)),
-    path(r'^api/users/(?P<pk>[0-9]+)$', views.user_detail),
+    re_path('api/users/(?P<comp_id>[a-zA-Z0-9]+)$', views.user_detail),
+    path('api/is_authenticated', views.is_authenticated),
     #path('google-auth/', views.GoogleAuthView.as_view())
     #path('auth/', views.register_by_access_token),
     # path('users/', views.UserList.as_view()),

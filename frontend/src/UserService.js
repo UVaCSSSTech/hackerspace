@@ -5,6 +5,11 @@ export default class UserService{
 
 	constructor(){}
 
+	isLoggedIn(token) {
+		const url = `${API_URL}/api/is_authhenticated`;
+		return axios.post(url, token).then(response => response.data);
+	}
+
 	getUsersByURL(link){
 		const url = `${API_URL}${link}`;
 		return axios.get(url).then(response => response.data);

@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
 import {Button, Menu, Container} from 'semantic-ui-react'
+import GoogleAuth from './GoogleAuth'
 
 
 import {
   Link
 } from "react-router-dom";
-
-
 
 export default class Navbar extends Component {
   state = {}
@@ -44,7 +43,8 @@ export default class Navbar extends Component {
           Our Team
         </Menu.Item>
         <Menu.Item position='right'>
-          <Button onClick={this.handleLogin}> Log in with UVa Email </Button>
+          //<Button onClick={this.handleLogin}> Log in with UVa Email </Button>
+          //<GoogleAuth> </GoogleAuth>
         </Menu.Item>
       </Menu>
       </Container>
