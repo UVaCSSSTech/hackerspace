@@ -416,9 +416,6 @@ class TechTeam extends Component{
     }
     return(
       <div>
-        <Container>
-          <Image src= "/assets/images/team/technology.jpeg"/>
-        </Container>
         {this.techProfile}
       </div>
     )

@@ -1,6 +1,4 @@
 import React, {Component} from 'react'
-import logo from '../assets/images/cssslogo.png'
-import image1 from '../assets/images/csssfamily.JPG'
 
 import {Form, Container, Header} from 'semantic-ui-react'
 import Carousel from 'react-bootstrap/Carousel'
@@ -9,8 +7,10 @@ import "../css/PhotoSlider.css"
 
 export default class PhotoSlider extends React.Component {
   imgs = [
-    '/assets/images/csssfamily.JPG',
-    '/assets/images/cssslogo.png',
+    '/assets/images/粉墨.png',
+    '/assets/images/舞龙舞狮.png',
+    '/assets/images/paradance.jpg',
+    '/assets/images/好声音.JPG',
     '/assets/images/csssfamily.JPG',
   ]
   sliderItems = []
