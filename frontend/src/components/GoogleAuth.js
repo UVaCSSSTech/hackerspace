@@ -7,7 +7,8 @@ import querystring from 'querystring';
 import { Redirect } from "react-router-dom";
 import { Button } from 'semantic-ui-react'
 
-const instance = axios.create({baseURL: 'http://localhost:8000'})
+const BASE_URL = 'http://localhost:3000'
+const instance = axios.create({baseURL: BASE_URL})
 
 async function onSignIn(googleUser) {
   console.log(googleUser.getAuthResponse())
@@ -67,7 +68,7 @@ async function onSignIn(googleUser) {
       console.log(response.status)
   })
 
-    //window.location.replace('http://localhost:3000/')
+    window.location.replace(`${BASE_URL}`)
 }
 
 export default class GoogleAuth extends React.Component {
@@ -79,33 +80,24 @@ export default class GoogleAuth extends React.Component {
     this.checkAuthentication();
   }
 
-  logout = () => {
-    sessionStorage.remove('access_token')
+  logout() {
+    sessionStorage.removeItem('access_token')
+    window.location.replace(`${BASE_URL}/`)
   }
 
-  async isAuthenticated() {
-    console.log('yes')
-    console.log(instance.defaults.headers.common)
+  isAuthenticated() {
     instance.defaults.headers.common['Authorization'] = 'Bearer google-oauth2 ' + sessionStorage.access_token;
     if (!sessionStorage.access_token)
       return false;
     else {
-
-        const response = await instance.get('api/is_authenticated')
-        console.log(response)
-        if (response.status === 200) {
-          return true;
-        } else {
-          return false;
-        }
-        // instance.get('api/is_authenticated')
-        //   .then(function (response) {
-        //     if (response.status === 200) {
-        //       return true
-        //     } else {
-        //       return false
-        //     }
-        // })
+        instance.get('api/is_authenticated')
+          .then(function (response) {
+            if (response.status === 200) {
+              return true
+            } else {
+              return false
+            }
+        })
     }
   }
 
@@ -116,12 +108,11 @@ export default class GoogleAuth extends React.Component {
       this.setState({ authenticated });
       //this.props.history.push('/home')
     }
+    return authenticated
   }
 
   render() {
-    //this.props.is_authenticated
-    //console.log(this.props.is_authenticated)
-    if (!this.state.is_authenticated) {
+    if (!sessionStorage.access_token) {
       return (
         <GoogleLogin
           clientId="466266907891-7po98cmg691r0onvv6nvqb7btcrve1tt.apps.googleusercontent.com"
@@ -132,7 +123,7 @@ export default class GoogleAuth extends React.Component {
       );
     } else {
       return (
-        <Button>Logged Out</Button>
+        <Button onClick={this.logout}>Logged Out</Button>
       )
     }
   }

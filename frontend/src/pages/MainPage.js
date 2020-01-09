@@ -16,7 +16,6 @@ function MainPage() {
               Established in 1998, the Chinese Students and Scholars Society (CSSS) is a cultural organization made of Chinese undergraduate and graduate students committed to fostering the growth of Chinese students community and providing academic and social support to help Chinese students better integrate into American culture.
             </p>
       </Container>
-      <SubscribeUs />
     </div>
   );
 }

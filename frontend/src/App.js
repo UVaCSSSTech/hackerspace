@@ -33,7 +33,6 @@ export default class App extends React.Component {
       <div className="app">
         <Header />
         <Footer />
-        <GoogleAuth />
       </div>
     );
   }

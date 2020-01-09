@@ -7,32 +7,11 @@ import Carousel from 'react-bootstrap/Carousel'
 import "../css/PhotoSlider.css"
 
 
-class PhotoSliderItem extends React.Component {
-  render() {
-    if (this.props.active) {
-      return (
-        <div className="carousel-item active">
-          <img className="d-block img-slider" src={this.props.img} alt=""/>
-        </div>
-      )
-    } else {
-      return (
-        <div className="carousel-item">
-          <img className="d-block img-slider" src={this.props.img} alt=""/>
-        </div>
-      )
-    }
-  }
-}
-
-// TO-Do Reactify this carousel with react-bootstrap
-// See https://react-bootstrap.github.io/components/carousel/ for reference
-
-
 export default class PhotoSlider extends React.Component {
   imgs = [
     '/assets/images/csssfamily.JPG',
-    '/assets/images/cssslogo.png'
+    '/assets/images/cssslogo.png',
+    '/assets/images/csssfamily.JPG',
   ]
   sliderItems = []
 
@@ -45,7 +24,8 @@ export default class PhotoSlider extends React.Component {
     for (var i = 0; i < this.imgs.length; i++) {
       this.sliderItems.push(
       <Carousel.Item>
-        <img 
+        <img
+          className='d-block w-100'
           src={this.imgs[i]}
           width={1000}
           height={500}
@@ -54,11 +34,12 @@ export default class PhotoSlider extends React.Component {
       </Carousel.Item>)
     }
     return (
-      <Carousel>
+      <Carousel className='carousel'
+        nextIcon={null}
+        prevIcon={null}
+        >
         {this.sliderItems}
       </Carousel>
     );
   }
 }
-
-

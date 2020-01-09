@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import {Button, Menu, Container} from 'semantic-ui-react'
+import {Button, Menu, Container, Grid} from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
 
-const ButtonExampleCircularSocial = () => (
+const ButtonCircularSocial = () => (
   <div>
-    <Button circular color='white' icon='envelope outline' />
-    <Button circular color='pink' icon='instagram' />
-    <Button circular color='green' icon='wechat' />
+    <a href="https://www.instagram.com/csssatuva/"><Button circular color='pink' icon='instagram'/></a>
+    <a href="https://wemp.app/accounts/6df01c46-2cd0-4e97-9b1c-2c391fdb432e"><Button circular color='green' icon='wechat'/></a>
   </div>
 )
 
@@ -13,7 +13,11 @@ export default class Footer extends Component {
   render() {
     return (
       <Container className="App-footer" fluid>
-        <ButtonExampleCircularSocial />
+        <Grid centered columns={1}>
+          <Grid.Column verticalAlign='middle' className='button-social'>
+            <ButtonCircularSocial />
+          </Grid.Column>
+        </Grid>
       </Container>
     );
   }

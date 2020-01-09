@@ -17,9 +17,6 @@ from .models import User
 
 import os
 
-from google.oauth2 import id_token
-from google.auth.transport import requests
-
 from django.contrib.auth import login
 from social_django.utils import psa
 # from allauth.socialaccount.providers.oauth2.views import (
@@ -137,7 +134,7 @@ def user_detail(request, comp_id):
         return Response(serializer.data)
 
     elif request.method == 'PUT':
-        serializer = userSerializer(user, data=request.data,context={'request': request})
+        serializer = UserSerializer(user, data=request.data,context={'request': request})
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
