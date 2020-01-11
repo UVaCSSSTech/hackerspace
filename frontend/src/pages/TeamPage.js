@@ -502,6 +502,7 @@ function TeamPage(){
   );
 }
 
+
 const Profile = ({name, intro, img}) =>(
   <Container>
     <Header as='large'>{name}</Header>
