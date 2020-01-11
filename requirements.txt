@@ -1,0 +1,10 @@
+Django==2.2.1
+django-bootstrap4==1.0.1
+django-braces==1.13.0
+django-cors-headers==3.1.1
+django-google-maps==0.11.0
+django-heroku==0.3.1
+django-oauth-toolkit==1.2.0
+django-rest-framework-social-oauth2==1.1.0
+djangorestframework==3.10.3
+gunicorn==19.9.0
