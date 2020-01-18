@@ -1,6 +1,6 @@
 {
-  "name": "{{project_name}}",
-  "description": "{{project_name|title}} Heroku app.",
+  "name": "hackerspace",
+  "description": "UVa CSSS Main Website",
   "env": {
     "ALLOWED_HOSTS": {
       "description": "Django ALLOWED_HOSTS setting, e.g.: .appname.herokuapp.com"
@@ -19,7 +19,7 @@
     },
     "DJANGO_SETTINGS_MODULE": {
       "description": "Django settings Python import path",
-      "value": "{{project_name}}.settings.production"
+      "value": "hackerspace.settings"
     },
     "SECRET_KEY": {
       "description": "Django SECRET_KEY setting",
@@ -36,28 +36,6 @@
       "size": "free"
     }
   },
-  "addons": [
-    {
-      "plan": "heroku-postgresql:hobby-dev",
-      "options": {
-        "version": "9.5"
-      },
-      "as": "DATABASE"
-    },
-    {
-      "plan": "heroku-redis:hobby-dev",
-      "options": {
-        "version": "3.2"
-      },
-      "as": "REDIS"
-    },
-    {
-      "plan": "sendgrid:starter"
-    },
-    {
-      "plan": "papertrail:choklad"
-    }
-  ],
   "buildpacks": [
     {
       "url": "heroku/nodejs"
