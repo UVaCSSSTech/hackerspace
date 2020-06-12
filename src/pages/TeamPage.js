@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { Button, Container, Menu, Image, Header} from 'semantic-ui-react'
-// import Profile from '../components/Profile.js';
 import "../css/Profile.css"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -14,50 +13,51 @@ import guxinyan from "../assets/images/csss2019/主席团/顾欣妍.jpg"
 
 import wangyilin from "../assets/images/csss2019/宣传部/王艺霖.jpg"
 import zhangxinyue from "../assets/images/csss2019/宣传部/张馨月.jpg"
-import bisiyao from "../assets/images/csss2019/宣传部/毕思瑶.jpg"
-import guojinlin from "../assets/images/csss2019/宣传部/郭锦琳.jpg"
+import bisiyao from "../assets/images/csss2020/council/毕思瑶.jpeg"
+import guojinlin from "../assets/images/csss2020/council/郭锦琳.jpeg"
 import jindi from "../assets/images/csss2019/宣传部/金荻.jpg"
 import wangjinyi from "../assets/images/csss2019/宣传部/王金益.jpg"
 import zhangningxin from "../assets/images/csss2019/宣传部/张宁欣.jpg"
 
-import qihongyang from "../assets/images/csss2019/活动部/漆泓阳.jpg"
+import qihongyang from "../assets/images/csss2020/council/漆泓阳.jpeg"
 import xiaozhiyue from "../assets/images/csss2019/活动部/肖芷玥.jpg"
 import liyifan from "../assets/images/csss2019/活动部/李一凡.jpg"
-import xunyuxin from "../assets/images/csss2019/活动部/郇宇欣.jpg"
+import xunyuxin from "../assets/images/csss2020/council/郇宇欣.jpeg"
 import wangyifan from "../assets/images/csss2019/活动部/王逸凡.jpg"
-import heyiwei from "../assets/images/csss2019/活动部/贺逸惟.jpg"
-import huqiyuan from "../assets/images/csss2019/活动部/胡淇媛.jpg"
+import heyiwei from "../assets/images/csss2020/council/贺逸惟.jpeg"
+import huqiyuan from "../assets/images/csss2020/council/胡淇媛.jpeg"
 import gaoshiyuan from "../assets/images/csss2019/活动部/高诗元.jpg"
 
-import chenyuqian from "../assets/images/csss2019/外联部/陈羽芊.jpg"
+import chenyuqian from "../assets/images/csss2020/council/陈羽芊.jpeg"
 import liushuyang from "../assets/images/csss2019/外联部/刘舒扬.jpg"
 import emilyfeng from "../assets/images/csss2019/外联部/Emily Feng.jpg"
 import feiaiwen from "../assets/images/csss2019/外联部/费爱雯.jpg"
 import lvchuyuan from "../assets/images/csss2019/外联部/陈羽芊.jpg"
-import chouqiyun from "../assets/images/csss2019/外联部/仇启贇.jpg"
+import chouqiyun from "../assets/images/csss2020/council/仇启贇.jpeg"
 
 import dumengru from "../assets/images/csss2019/发财部/杜梦如.jpg"
 import yangshuai from "../assets/images/csss2019/发财部/杨帅.jpg"
-import wangmengchen from "../assets/images/csss2019/发财部/王梦辰.jpg"
+import wangmengchen from "../assets/images/csss2020/council/王梦辰.jpeg"
 import miutianqi from "../assets/images/csss2019/发财部/缪天琪.jpg"
 import shaoanqi from "../assets/images/csss2019/发财部/邵安琦.jpg"
 import zhoujiayu from "../assets/images/csss2019/发财部/周佳羽.jpg"
 import lvyongze from "../assets/images/csss2019/发财部/吕永泽.jpg"
 
 import taochencheng from "../assets/images/csss2019/文化部/陶陈成.jpg"
-import wangwenqian from "../assets/images/csss2019/文化部/汪文谦.jpg"
+import wangwenqian from "../assets/images/csss2020/council/汪文谦.jpeg"
 import caomianchen from "../assets/images/csss2019/文化部/曹冕宸.jpg"
 import zhangxiaoxuan from "../assets/images/csss2019/文化部/张笑瑄.jpg"
 import suyiyue from "../assets/images/csss2019/文化部/苏怡月.jpg"
 import nizhenbang from "../assets/images/csss2019/文化部/倪振邦.jpg"
-import wangxiaopi from "../assets/images/csss2019/文化部/王小皮.jpg"
-import zhangdanyan from "../assets/images/csss2019/文化部/张丹妍.jpg"
+import wangxiaopi from "../assets/images/csss2020/council/王小皮.jpeg"
+import zhangdanyan from "../assets/images/csss2020/council/张丹妍.jpeg"
 import yulinfei from "../assets/images/csss2019/文化部/虞林霏.jpg"
 
 import tansijun from "../assets/images/csss2019/科技部/谭嗣俊.jpg"
 import liuchenlin from "../assets/images/csss2019/科技部/刘辰琳.jpg"
-import longwenjun from "../assets/images/csss2019/科技部/龙玟君.jpg"
-import fengjiaqi from "../assets/images/csss2019/科技部/冯家琪.jpg"
+import longwenjun from "../assets/images/csss2020/council/龙玟君.jpeg"
+import fengjiaqi from "../assets/images/csss2020/council/冯家琪.jpeg"
+import fengjialin from "../assets/images/csss2020/council/冯家琳.jpeg"
 
 class PresidentialTeam extends Component{
   presidential_boardProfile = []
@@ -111,6 +111,136 @@ class PresidentialTeam extends Component{
   }
 }
 
+class CouncilTeam extends Component{
+  councilProfile = []
+  render(){
+    const council = [
+      {
+        title:"主席",
+        name:"汪文谦",
+        intro:"来自北京，阿森纳/摇滚/韩式料理，不擅长写论文的文科生，在经济与国际关系双专业压榨下努力生活。\
+        非常感恩过去在csss中的成长与收获，希望同大家带领csss走到一个新的高度。",
+        img:wangwenqian
+      },
+      {
+        title:"内务副主席",
+        name:"漆泓阳",
+        intro:"大家好，我是2022届的漆泓阳，专业是国际关系以及经济，在csss任职内务副主席。\
+        在过去的两年，我作为活动部的部员到部长，同csss的各位结下了深刻的友谊，\
+        并一同举办了例如中秋游园会以及UVA好声音等各种丰富夏村华人的大型活动。\
+        在获得宝贵经验的同时，自己也与csss的伙伴们一起收获了不少快乐以及认可。\
+        今年，作为新一届内务副主席，我也希望自己可以在做好内务工作的同时，继续参与到各个活动的策划和筹办之中。\
+        为各位献上更为精彩的活动的同时，努力提高自己的能力，并和大家一起玩的开心，认识更多优秀且有趣的新朋友！",
+        img:qihongyang
+      },
+      {
+        title:"外务副主席",
+        name:"王梦辰",
+        intro:"大家好，我是来自天津的王梦辰Veronique，CS和Statistics double major。\
+        喜欢kpop和旅行。希望在新的一年里和CSSS一起带给大家更多更好的活动！",
+        img:wangmengchen
+      },
+      {
+        title:"秘书",
+        name:"陈羽芊",
+        intro:"来自杭州，major psyc, minor日语。喜欢看番看剧看电影，撸猫撸狗撸猫头鹰。\
+        2022届养生第一人（自封）不吃洋葱和黑木耳。希望接下来的一年内能帮助csss做得更好！",
+        img:chenyuqian
+      },
+      {
+        title:"文化部部长",
+        name:"冯家琪",
+        intro:"大家好呀，我是冯家琪Sara，来自北京朝阳。专业是Computer Science 和 Statistics。\
+        曾经的网瘾少女，但目前最喜欢的是窝在沙发上发呆喝ice tea，刷综艺动漫日剧。\
+        擅长的事是熬夜肝码，拉着大家一起团建。喜欢读各种类型的书，更喜欢硬科幻。\
+        希望新的一年大家学好玩好，和CSSS一起变得更好",
+        img:fengjiaqi
+      },
+      {
+        title:"文化部部长",
+        name:"郇宇欣",
+        intro:"Hihi～这里是郇宇欣Jennifer。是一个出生在山东的北京人。\
+        马上大三，econ major。爱好-看剧追星研究烘焙。希望未来的一年可以跟大家一起举办好的活动💚",
+        img:xunyuxin
+      },
+      {
+        title:"活动部部长",
+        name:"胡淇媛",
+        intro:"大家好，我是今年的活动部部长胡淇媛。本人是准大二萌新，心理学专业，最大的爱好是吃和晒太阳，目前运势非常水逆。\
+        我希望能在今后的工作中与大家共同努力，共同进步，为UVA的华人群体和对中华文化感兴趣的其他同学带来更多更有趣的活动。\
+        P.S. 聚餐请叫我 我超爱洗碗",
+        img:huqiyuan
+      },
+      {
+        title:"活动部部长",
+        name:"贺逸惟",
+        intro:"大家好我叫贺逸惟，英文名叫richard，今年秋季开学大二。\
+        在去年我在活动部当部员，积累了一些经验，并且想在未来跟CSSS一同进步，举办更好的活动！",
+        img:heyiwei
+      },
+      {
+        title:"宣传部部长",
+        name:"毕思瑶",
+        intro:"大家好，这里是毕思瑶Angelica，来自四川，可以叫我小妖。暂定专业是政治哲学相关+天文学。喜欢弹钢琴、画画、做手工。\
+        很荣幸可以在加入CSSS的第二年担任宣传部长，希望大家集思广益，取长补短，一起成长，一起进步，一起让CSSS变得更好～",
+        img:bisiyao
+      },
+      {
+        title:"宣传部部长",
+        name:"郭锦琳",
+        intro:"来自厦门，梦想当咸鱼，希望新的一年能和csss一起冲🐛！",
+        img:guojinlin
+      },
+      {
+        title:"外联部部长",
+        name:"冯家琳",
+        intro:"大家好~我是Emily冯家琳，来自北京。目前的专业是CS。爱好打游戏、做攻略、逛街、看电影、做饭、追小说。\
+        喜欢所有甜品（一杯奶茶可以快乐一天）！！未来的一年，希望CSSS越来越好，举办更多有趣的活动，也希望大家玩得开心！",
+        img:fengjialin
+      },
+      {
+        title:"外联部部长",
+        name:"王小皮",
+        intro:"大家好我是今年担任外联部部长的王小皮，是个不会说太粤语但喜欢喝早茶的深圳人。\
+        平常的爱好有猫猫，摄影画画，烫头染头，看着我朋友做饭，听十年前的粤语歌，和坐过山车。\
+        虽然照片里我头发花里胡哨（是@宣传部长bsy拍的），但我人很好相处的！希望能为csss贡献自己的力量啦，新的一年大家一起变得更好",
+        img:wangxiaopi
+      },
+      {
+        title:"科技部部长",
+        name:"龙玟君",
+        intro:"武汉人，专业CS+Psyc，喜欢音乐剧和动漫。\
+        目前发量还撑得住，但为了日后考虑还是保持了一个不熬夜（肝code另算）的健康作息。\
+        希望能拉到更多朋友一起进科技部写码和玩耍，科技改变生活不是句空话。期待和CSSS的各位一起更好的服务华人社区。",
+        img:longwenjun
+      },
+      {
+        title:"财务部部长",
+        name:"张丹妍",
+        intro:"大家好！我是张丹妍Jessica，来自北京，暂定数学和经济major。 \
+        喜欢草莓味了蓝莓味的一切东西，还喜欢边吃螺狮粉边看电影。 希望未来一年我能把钱算明白，头发可以不炸毛。",
+        img:zhangdanyan
+      },
+      {
+        title:"职业发展部部长",
+        name:"仇启贇",
+        intro:"来自上海，在波士顿读了四年美高，现在已经是大三的阿姨了… \
+        喜欢音乐和研究好吃的东西，欢迎大家来我家蹭饭！CSSS新的一年也要🐛🐛🐛",
+        img:chouqiyun
+      }
+    ]
+    for(var i = 0; i < council.length; i++){
+      this.councilProfile.push(
+        <Profile {...council[i]} />
+      )
+    }
+    return(
+      <div>
+        {this.councilProfile}
+      </div>
+    )
+  }
+}
 class PublicityTeam extends Component{
   publicityProfile = []
   render(){
@@ -494,6 +624,13 @@ class TeamMenu extends Component {
             to='/team/presidential_board'
           />
           <Menu.Item
+            name='Council'
+            active={activeItem === 'Council'}
+            onClick={this.handleItemClick}
+            as={Link}
+            to='/team/council'
+          />
+          <Menu.Item
             name='Activity'
             active={activeItem === 'Activity'}
             onClick={this.handleItemClick}
@@ -546,16 +683,16 @@ function TeamPage(){
       <Container>
         <Router>
           <TeamMenu />
-          {/* <TeamInfo /> */}
           <Switch>
             <Route exact path='/team/technology' component={TechTeam}></Route>
             <Route exact path='/team/culture' component={CultureTeam}></Route>
             <Route exact path='/team/outreach' component={OutreachTeam}></Route>
             <Route exact path='/team/activity' component={ActivityTeam}></Route>
             <Route exact path='/team/presidential_board' component={PresidentialTeam}></Route>
-            //<Route exact path='/team' component={PresidentialTeam}></Route>
+            <Route exact path='/team' component={PresidentialTeam}></Route>
             <Route exact path='/team/publicity' component={PublicityTeam}></Route>
             <Route exact path='/team/career' component={CareerFinanceTeam}></Route>
+            <Route exact path='/team/council' component={CouncilTeam}></Route>
           </Switch>
         </Router>
       </Container>
@@ -563,9 +700,9 @@ function TeamPage(){
 }
 
 
-const Profile = ({name, intro, img}) =>(
+const Profile = ({title, name, intro, img}) =>(
   <Container>
-    <Header as='large'>{name}</Header>
+    <Header as='large'>{name}: {title}</Header>
     <Container id="border">
       <Row>
         <Col xs={4}><img src={img} id="img"/></Col>
