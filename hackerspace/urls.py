@@ -22,14 +22,14 @@ from django.views.static import serve
 from .views import index
 
 urlpatterns = [
-    path('/', index, name='index'),
+    path('', index, name='index'),
     re_path(r'^.*$', index),
     #re_path(r'^(?:.*)/?$', index),
     path('admin/', admin.site.urls),
-    path('/', include('api.urls')),
+    path('', include('api.urls')),
     #path('api-auth/', include('rest_framework.urls')),
     path('auth/', include(('rest_framework_social_oauth2.urls', 'rest_framework_social_oauth2'), namespace='auth')),
-    path('/', include('social_django.urls', namespace='social')),
+    path('', include('social_django.urls', namespace='social')),
 ] 
 
 #urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
