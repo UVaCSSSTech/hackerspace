@@ -1,0 +1,47 @@
+{
+  "name": "hackerspace",
+  "description": "UVa CSSS Main Website",
+  "env": {
+    "ALLOWED_HOSTS": {
+      "description": "Django ALLOWED_HOSTS setting, e.g.: .appname.herokuapp.com"
+    },
+    "DISABLE_COLLECTSTATIC": {
+      "description": "Disables Heroku collectstatic",
+      "value": "1"
+    },
+    "ENABLE_DJANGO_COLLECTSTATIC": {
+      "description": "Enables post-compile collectstatic (it is run by bin/post_compile)",
+      "value": "1"
+    },
+    "AUTO_MIGRATE": {
+      "description": "Heroku setting to run Django migrate automatically (it is run by bin/post_compile)",
+      "value": "1"
+    },
+    "DJANGO_SETTINGS_MODULE": {
+      "description": "Django settings Python import path",
+      "value": "hackerspace.settings"
+    },
+    "SECRET_KEY": {
+      "description": "Django SECRET_KEY setting",
+      "generator": "secret"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    },
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
