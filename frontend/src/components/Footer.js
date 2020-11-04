@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Button, Menu, Container, Grid} from 'semantic-ui-react'
-import {Link} from 'react-router-dom'
+import {Button, Container, Grid} from 'semantic-ui-react'
 
 const ButtonCircularSocial = () => (
   <div>
