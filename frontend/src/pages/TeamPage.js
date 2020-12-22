@@ -1,15 +1,9 @@
 import React, {Component} from 'react';
-import { Button, Container, Menu, Image, Header} from 'semantic-ui-react'
+import { Container, Menu, Header} from 'semantic-ui-react'
 import "../css/Profile.css"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link, Route, BrowserRouter as Router, Switch } from "react-router-dom";
-
-import zhangjiakai from "../assets/images/csss2019/主席团/张家恺.jpg"
-import xushuhui from "../assets/images/csss2019/主席团/徐书卉.jpg"
-import chenqiaohao from "../assets/images/csss2019/主席团/陈翘浩.jpg"
-import tongyao from "../assets/images/csss2019/主席团/童瑶.jpg"
-import guxinyan from "../assets/images/csss2019/主席团/顾欣妍.jpg"
 
 import wangyilin from "../assets/images/csss2019/宣传部/王艺霖.jpg"
 import zhangxinyue from "../assets/images/csss2019/宣传部/张馨月.jpg"
@@ -34,89 +28,22 @@ import emilyfeng from "../assets/images/csss2019/外联部/Emily Feng.jpg"
 import feiaiwen from "../assets/images/csss2019/外联部/费爱雯.jpg"
 import lvchuyuan from "../assets/images/csss2019/外联部/陈羽芊.jpg"
 import chouqiyun from "../assets/images/csss2020/council/仇启贇.jpeg"
-
-import dumengru from "../assets/images/csss2019/发财部/杜梦如.jpg"
-import yangshuai from "../assets/images/csss2019/发财部/杨帅.jpg"
 import wangmengchen from "../assets/images/csss2020/council/王梦辰.jpeg"
-import miutianqi from "../assets/images/csss2019/发财部/缪天琪.jpg"
-import shaoanqi from "../assets/images/csss2019/发财部/邵安琦.jpg"
-import zhoujiayu from "../assets/images/csss2019/发财部/周佳羽.jpg"
-import lvyongze from "../assets/images/csss2019/发财部/吕永泽.jpg"
 
-import taochencheng from "../assets/images/csss2019/文化部/陶陈成.jpg"
 import wangwenqian from "../assets/images/csss2020/council/汪文谦.jpeg"
-import caomianchen from "../assets/images/csss2019/文化部/曹冕宸.jpg"
-import zhangxiaoxuan from "../assets/images/csss2019/文化部/张笑瑄.jpg"
-import suyiyue from "../assets/images/csss2019/文化部/苏怡月.jpg"
-import nizhenbang from "../assets/images/csss2019/文化部/倪振邦.jpg"
 import wangxiaopi from "../assets/images/csss2020/council/王小皮.jpeg"
 import zhangdanyan from "../assets/images/csss2020/council/张丹妍.jpeg"
-import yulinfei from "../assets/images/csss2019/文化部/虞林霏.jpg"
-import dukeyan from "../assets/images/csss2020new/文化部/都柯言.jpg"
-import huanyuxin from "../assets/images/csss2020new/文化部/郇宇欣 Jennifer.jpeg"
-import liangnan from "../assets/images/csss2020new/文化部/梁楠.jpeg"
-import sunjingyan from "../assets/images/csss2020new/文化部/孙敬言 Jack.jpg"
-
-import tansijun from "../assets/images/csss2019/科技部/谭嗣俊.jpg"
-import liuchenlin from "../assets/images/csss2019/科技部/刘辰琳.jpg"
+import dukeyan from "../assets/images/csss2020/文化部/都柯言.jpg"
+import huanyuxin from "../assets/images/csss2020/文化部/郇宇欣 Jennifer.jpeg"
+import liangnan from "../assets/images/csss2020/文化部/梁楠.jpeg"
+import sunjingyan from "../assets/images/csss2020/文化部/孙敬言 Jack.jpg"
 import longwenjun from "../assets/images/csss2020/council/龙玟君.jpeg"
 import fengjiaqi from "../assets/images/csss2020/council/冯家琪.jpeg"
 import fengjialin from "../assets/images/csss2020/council/冯家琳.jpeg"
-import zhouyancheng from "../assets/images/csss2020new/科技部/周彦铖.jpeg"
-import songxiyuan from "../assets/images/csss2020new/科技部/宋希元.jpg"
-
-class PresidentialTeam extends Component{
-  presidential_boardProfile = []
-  render(){
-    const presidential_board = [
-      {
-        name : "张家恺",
-        intro : "我是来自北京的张家恺，目前就读于文理学院。很高兴能在新的一学年继续在CSSS \
-        为大家服务，在接下来一学年，希望可以为职业发展项目打下坚实的基础，为在UVA的中国留学生 \
-        群体提供不同领域的求职帮助。长期人生理想是开一家做粤菜的酒馆。",
-        img : zhangjiakai,
-      },
-      {
-        name : "徐书卉",
-        intro : "我是来自北京的张家恺，目前就读于文理学院。很高兴能在新的一学年继续在CSSS \
-        为大家服务，在接下来一学年，希望可以为职业发展项目打下坚实的基础，为在UVA的中国留学生 \
-        群体提供不同领域的求职帮助。长期人生理想是开一家做粤菜的酒馆。",
-        img : xushuhui,
-      },
-      {
-        name : "陈翘浩",
-        intro : "Hi大家好！我来自广州，专业是Statistics和Economics，喜欢唱歌，篮球，做饭，\
-        投资，看书。人生理想是创业并拥有属于自己的公司，然后不仅仅周游世界，还要体验太空旅游。\
-        最爱喝各种老火靓汤和吃早茶。未来一年想带领CSSS变得更好，为夏村的华人群体带来更多有趣并难忘的经历！",
-        img : chenqiaohao
-      },
-      {
-        name : "童瑶",
-        intro : "大家好我是徐书卉Daisy，来自南京，专业Commerce和Statistics. 喜欢足球，\
-        喜欢C罗和皇马，喜欢看电影美剧韩剧，喜欢逛博物馆水族馆，喜欢旅游和被拍。最爱吃冻酸奶和\
-        辣豆腐汤，未来一年希望跟CSSS的大家越来越亲密，碰撞出灵感和思维的火花！",
-        img : tongyao
-      },
-      {
-        name : "顾欣妍",
-        intro : "来自上海，major数学和经济，minor法语，爱好马术和音乐还有吃喝玩乐，人生理想\
-        是成为富婆，最爱吃的东西是糖醋小排，希望CSSS越来越好！",
-        img : guxinyan
-      },
-    ]
-    for(var i = 0; i < presidential_board.length; i++){
-      this.presidential_boardProfile.push(
-        <Profile {...presidential_board[i]} />
-      )
-    }
-    return(
-      <div>
-        {this.presidential_boardProfile}
-      </div>
-    )
-  }
-}
-
+import zhouyancheng from "../assets/images/csss2020/科技部/周彦铖.jpeg"
+import songxiyuan from "../assets/images/csss2020/科技部/宋希元.jpg"
+import liushuze from "../assets/images/csss2020/council/刘澍泽.jpeg"
+import songlijia from "../assets/images/csss2020/发财部/宋莉嘉.jpeg"
 class CouncilTeam extends Component{
   councilProfile = []
   render(){
@@ -131,26 +58,26 @@ class CouncilTeam extends Component{
       {
         title:"内务副主席",
         name:"漆泓阳",
-        intro:"大家好，我是2022届的漆泓阳，专业是国际关系以及经济，在csss任职内务副主席。\
-        在过去的两年，我作为活动部的部员到部长，同csss的各位结下了深刻的友谊，\
-        并一同举办了例如中秋游园会以及UVA好声音等各种丰富夏村华人的大型活动。\
-        在获得宝贵经验的同时，自己也与csss的伙伴们一起收获了不少快乐以及认可。\
-        今年，作为新一届内务副主席，我也希望自己可以在做好内务工作的同时，继续参与到各个活动的策划和筹办之中。\
-        为各位献上更为精彩的活动的同时，努力提高自己的能力，并和大家一起玩的开心，认识更多优秀且有趣的新朋友！",
+        intro:"各位认识的以及不认识的朋友们大家好。我叫漆泓阳Arthur，来自林城贵阳，和老干妈以及我兄弟茅台同乡。\
+        现在大三，专业是Foreign Affair和Economics，Minor日语。从大一来到UVA以来，我就一直是CSSS的一员。\
+        这三年从活动部的部员做到部长，再到现在的内务副主席位置，我也参与和举办了大大小小的活动，经历虽说宝贵，但最令我珍惜的还是过去两年的回忆。\
+        今年虽说没有办法返回夏村，带新生们体验UVA的校园生活，但我们依然希望可以在丰富同学们的的课余生活，举办各种活动的同时，结交更多的朋友。\
+        我也感激有这么多心系UVA华人团体的同学可以一同加入CSSS这个大家庭，希望我在CSSS的第三年，在各位的陪伴下，可以收获更多，让CSSS越来越多元，越来越好。\
+        （然后兴趣爱好是忙里偷闲，时而小酌，感兴趣的朋友请私聊我）",
         img:qihongyang
       },
       {
         title:"外务副主席",
         name:"王梦辰",
-        intro:"大家好，我是来自天津的王梦辰Veronique，CS和Statistics double major。\
-        喜欢kpop和旅行。希望在新的一年里和CSSS一起带给大家更多更好的活动！",
+        intro:"大家好，我是来自天津的王梦辰Veronique，CS和Statistics double major。喜欢kpop和旅行。\
+        希望在新的一年里和CSSS一起带给大家更多更好的活动！",
         img:wangmengchen
       },
       {
         title:"秘书",
         name:"陈羽芊",
-        intro:"来自杭州，major psyc, minor日语。喜欢看番看剧看电影，撸猫撸狗撸猫头鹰。\
-        2022届养生第一人（自封）不吃洋葱和黑木耳。希望接下来的一年内能帮助csss做得更好！",
+        intro:"大家好，我是来自杭州的陈羽芊。专业是psyc和日语。喜欢撸猫撸狗看番看剧。本命美剧是Sense8，喜欢HP系列电影（今年的学院杯属于斯莱特林！）\
+        希望能在CSSS带着大家好好工作好好玩。希望可以在今年这个大家都难的事态下尽自己的一份力。",
         img:chenyuqian
       },
       {
@@ -159,49 +86,46 @@ class CouncilTeam extends Component{
         intro:"大家好呀，我是冯家琪Sara，来自北京朝阳。专业是Computer Science 和 Statistics。\
         曾经的网瘾少女，但目前最喜欢的是窝在沙发上发呆喝ice tea，刷综艺动漫日剧。\
         擅长的事是熬夜肝码，拉着大家一起团建。喜欢读各种类型的书，更喜欢硬科幻。\
-        希望新的一年大家学好玩好，和CSSS一起变得更好",
+        希望新的一年大家学好玩好，和CSSS一起变得更好。",
         img:fengjiaqi
       },
       {
         title:"文化部部长",
         name:"郇宇欣",
-        intro:"Hihi～这里是郇宇欣Jennifer。是一个出生在山东的北京人。\
-        马上大三，econ major。爱好-看剧追星研究烘焙。希望未来的一年可以跟大家一起举办好的活动💚",
+        intro:"大家好，我是郇宇欣 Jennifer。来自北京 2022届 econ major。我的爱好是听Kpop 看物料。\
+        我喜欢吃各种各样的美食。我喜欢小猫咪，可惜我家里不能养猫。希望在接下来的一年里跟大家一起举办各种各样有趣有意义的活动。谢谢大家～",
         img:xunyuxin
       },
       {
         title:"活动部部长",
         name:"胡淇媛",
-        intro:"大家好，我是今年的活动部部长胡淇媛。本人是准大二萌新，心理学专业，最大的爱好是吃和晒太阳，目前运势非常水逆。\
-        我希望能在今后的工作中与大家共同努力，共同进步，为UVA的华人群体和对中华文化感兴趣的其他同学带来更多更有趣的活动。\
-        P.S. 聚餐请叫我 我超爱洗碗",
+        intro:"我是lizzy，个人爱好在美食小说番剧游戏漫画间反复横跳，间歇性神经质但我真的是个好人！我来自武汉，有谁想去武汉观光可以找我哦www \
+        很高兴今年还能留在csss，希望能和大家一起努力，继续给大家带来有趣的活动！",
         img:huqiyuan
       },
       {
         title:"活动部部长",
-        name:"贺逸惟",
-        intro:"大家好我叫贺逸惟，英文名叫richard，今年秋季开学大二。\
-        在去年我在活动部当部员，积累了一些经验，并且想在未来跟CSSS一同进步，举办更好的活动！",
-        img:heyiwei
+        name:"刘澍泽",
+        intro:"Hi，我叫刘澍泽，来自太原，专业是理论计算机的博弈论，爱好健身滑雪Roadtrip，希望在CSSS认识到更多的小伙伴，大家一起玩耍。",
+        img:liushuze
       },
       {
         title:"宣传部部长",
         name:"毕思瑶",
-        intro:"大家好，这里是毕思瑶Angelica，来自四川，可以叫我小妖。暂定专业是政治哲学相关+天文学。喜欢弹钢琴、画画、做手工。\
-        很荣幸可以在加入CSSS的第二年担任宣传部长，希望大家集思广益，取长补短，一起成长，一起进步，一起让CSSS变得更好～",
+        intro:"Hello大噶好，这里是来自四川的小妖毕思瑶～新的一年也希望和CSSS的大家一起努力一起进步～",
         img:bisiyao
       },
       {
         title:"宣传部部长",
         name:"郭锦琳",
-        intro:"来自厦门，梦想当咸鱼，希望新的一年能和csss一起冲🐛！",
+        intro:"我来自厦门 专业统计经济 喜欢吃和睡觉 希望csss新的一年 冲就是了",
         img:guojinlin
       },
       {
         title:"外联部部长",
         name:"冯家琳",
-        intro:"大家好~我是Emily冯家琳，来自北京。目前的专业是CS。爱好打游戏、做攻略、逛街、看电影、做饭、追小说。\
-        喜欢所有甜品（一杯奶茶可以快乐一天）！！未来的一年，希望CSSS越来越好，举办更多有趣的活动，也希望大家玩得开心！",
+        intro:"大家好～我是外联部部长Emily。北京妹子。平时喜欢玩游戏、唱歌、逛街、喝奶茶、吃甜点、做美食攻略+打卡网红餐厅！\
+        希望未来的一年能和CSSS一起组织更多有趣的活动(*¯︶¯*)",
         img:fengjialin
       },
       {
@@ -215,16 +139,13 @@ class CouncilTeam extends Component{
       {
         title:"科技部部长",
         name:"龙玟君",
-        intro:"武汉人，专业CS+Psyc，喜欢音乐剧和动漫。\
-        目前发量还撑得住，但为了日后考虑还是保持了一个不熬夜（肝code另算）的健康作息。\
-        希望能拉到更多朋友一起进科技部写码和玩耍，科技改变生活不是句空话。期待和CSSS的各位一起更好的服务华人社区。",
+        intro:"武汉人，专业CS和Psyc，爱好二次元、音乐剧和涂鸦。希望新的一年继续在CSSS快乐肝码和认识许多小伙伴！",
         img:longwenjun
       },
       {
         title:"财务部部长",
         name:"张丹妍",
-        intro:"大家好！我是张丹妍Jessica，来自北京，暂定数学和经济major。 \
-        喜欢草莓味了蓝莓味的一切东西，还喜欢边吃螺狮粉边看电影。 希望未来一年我能把钱算明白，头发可以不炸毛。",
+        intro:"来自北京，喜欢吃饭和睡觉 偏爱甜食 : )",
         img:zhangdanyan
       },
       {
@@ -431,66 +352,32 @@ class OutreachTeam extends Component{
   }
 }
 
-class CareerFinanceTeam extends Component{
-  careerProfile = []
+class FinanceTeam extends Component{
+  financeProfile = []
   render(){
-    const career  = [
+    const finance  = [
       {
-        name : "杜梦如",
-        intro : "大家好，我是来自北京的Claire杜梦如。\
-        专业Econ & Studio Art(Photography)，minor Astronomy. \
-        平时喜欢做饭，拍照，肝游戏，玩手办，看电竞。\
-        希望在csss可以把职业发展项目做大做好，真正服务到华人群体。",
-        img : dumengru
+        name:"张丹妍",
+        intro:"来自北京，喜欢吃饭和睡觉 偏爱甜食 : )",
+        img:zhangdanyan
       },
       {
-        name : "杨帅",
-        intro : "大家好 我来自北京 double comm和stat。人生理想是养很多猫猫狗狗。\
-        未来一年想在csss办有意思的活动，更好地服务大家：）",
-        img : yangshuai
-      },
-      {
-        name : "王梦辰",
-        intro : "大家好，我是来自天津的Veronique王梦辰，大二，\
-        职业发展与金融管理部部长，现在是stat major，应该会double CS。喜欢kpop，音乐剧，跳舞。\
-        希望在未来一年和大家相处的愉快，更好的为夏村华人服务。",
-        img : wangmengchen
-      },
-      {
-        name : "缪天琪",
-        intro : "我来自江苏无锡，以后准备学东亚研究。喜欢看动漫。\
-        曾经的理想是在东京或者上海开一家高级餐厅。现在暂时还不知道要不要坚持这个理想。\
-        喜欢吃龟苓膏，薯片，拿破仑蛋糕，和喝奶茶。希望在csss与大家好好相处！",
-        img : miutianqi
-      },
-      {
-        name : "邵安琦",
-        intro : "hello，大家好。我是邵安琦，来自江苏。我是一名大一新生，专业undecided。\
-        希望在csss这个集体中和大家合作愉快！",
-        img : shaoanqi
-      },
-      {
-        name : "周佳羽",
-        intro : "我叫周佳羽Katy，来自北京，专业是pre-comm&Econ。\
-        爱好看剧看电影打拳做饭烘焙，人生理想之一是开一家吃了不会胖的甜品店。\
-        希望未来一年能和csss的小伙伴们开心玩耍并更好的服务大家！",
-        img : zhoujiayu
-      },
-      {
-        name : "吕永泽",
-        intro : "我的家在东北地区 松花江下啊～ 长春人 超喜欢大自然小动物\
-        人生理想！复活恐龙！四川火锅！希望可以为华人团体提供更多接触工作的机会。",
-        img : lvyongze
+        name : "宋莉嘉",
+        intro : "大家好吖，我是宋莉嘉Lillian2024er，来自成都，性别女爱好吃，\
+        想要major in ECON & STAT（但现在并没有很自信可以double major，平常喜欢和大家一起唠嗑，\
+        到处走走逛逛，接受各种安利，比较佛系生活～加入CSSS也是希望可以把中国留学生们connect起来给大家在异国他乡带来家的感觉，\
+        努力做他们坚强的后盾。",
+        img : songlijia
       },
     ]
-    for(var i = 0; i < career.length; i++){
-      this.careerProfile.push(
-        <Profile {...career[i]} />
+    for(var i = 0; i < finance.length; i++){
+      this.financeProfile.push(
+        <Profile {...finance[i]} />
       )
     }
     return(
       <div>
-        {this.careerProfile}
+        {this.financeProfile}
       </div>
     );
   }
@@ -600,13 +487,6 @@ class TeamMenu extends Component {
       <div>
         <Menu pointing secondary>
           <Menu.Item
-            name='Presidential Board'
-            active={activeItem === 'Presidential Board'}
-            onClick={this.handleItemClick}
-            as={Link}
-            to='/team/presidential_board'
-          />
-          <Menu.Item
             name='Council'
             active={activeItem === 'Council'}
             onClick={this.handleItemClick}
@@ -649,11 +529,11 @@ class TeamMenu extends Component {
             to='/team/culture'
           />
         <Menu.Item
-            name='Career Finance'
-            active={activeItem === 'Career'}
+            name='Finance'
+            active={activeItem === 'Finance'}
             onClick={this.handleItemClick}
             as={Link}
-            to='/team/career'
+            to='/team/finance'
           />
         </Menu>
       </div>
@@ -671,10 +551,9 @@ function TeamPage(){
             <Route exact path='/team/culture' component={CultureTeam}></Route>
             <Route exact path='/team/outreach' component={OutreachTeam}></Route>
             <Route exact path='/team/activity' component={ActivityTeam}></Route>
-            <Route exact path='/team/presidential_board' component={PresidentialTeam}></Route>
-            <Route exact path='/team' component={PresidentialTeam}></Route>
+            <Route exact path='/team' component={CouncilTeam}></Route>
             <Route exact path='/team/publicity' component={PublicityTeam}></Route>
-            <Route exact path='/team/career' component={CareerFinanceTeam}></Route>
+            <Route exact path='/team/finance' component={FinanceTeam}></Route>
             <Route exact path='/team/council' component={CouncilTeam}></Route>
           </Switch>
         </Router>
