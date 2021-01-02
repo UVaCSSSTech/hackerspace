@@ -4,8 +4,6 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 
-
-
 const UserContext = React.createContext();
 
 class App extends React.Component {
