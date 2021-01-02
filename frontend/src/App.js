@@ -15,7 +15,6 @@ class App extends React.Component {
     };
     //this.handleLogin = this.handleLogin.bind(this);
   }
-
   // checkLoginStatus() {
   //   axios.get('http://localhost:8000/', withCredentials=True)
   // }
