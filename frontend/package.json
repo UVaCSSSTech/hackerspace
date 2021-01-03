@@ -1,6 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "homepage": "https://master.d1y8ajuhhtv1md.amplifyapp.com/",
   "private": true,
   "dependencies": {
     "@aws-amplify/ui-react": "^0.2.33",
