@@ -44,6 +44,15 @@ import zhouyancheng from "../assets/images/csss2020/科技部/周彦铖.jpeg"
 import songxiyuan from "../assets/images/csss2020/科技部/宋希元.jpg"
 import liushuze from "../assets/images/csss2020/council/刘澍泽.jpeg"
 import songlijia from "../assets/images/csss2020/发财部/宋莉嘉.jpeg"
+
+import chenzhangchi from "../assets/images/csss2020/外联部/陈张驰.jpeg"
+import yanghongjia from "../assets/images/csss2020/外联部/杨鸿嘉.jpeg"
+import fengjialin from "../assets/images/csss2020/外联部/冯家琳.jpeg"
+import shenyanwei from "../assets/images/csss2020/外联部/沈彦苇.jpeg"
+import wangshiqi from "../assets/images/csss2020/外联部/王诗淇.jpeg"
+import lirunjiu from "../assets/images/csss2020/外联部/李润玖Renny.jpeg"
+import luojiayi from "../assets/images/csss2020/外联部/罗嘉仪.jpeg"
+
 class CouncilTeam extends Component{
   councilProfile = []
   render(){
@@ -303,34 +312,43 @@ class OutreachTeam extends Component{
   render(){
     const outreach = [
       {
-        name : "陈羽芊",
-        intro : "来自杭州，major psyc，可能想minor德语或者日语，喜欢看番看剧看电，\
-        撸猫撸狗撸猫头鹰。吃这方面还挺随意的，基本啥都吃很好养活，就是不吃洋葱和黑木耳，\
-        咖喱里面切成小拇指指甲盖大小的洋葱我也能都挑出来。希望这一年能在CSSS好好工作好好玩。以上。",
-        img : chenyuqian
+        name : "冯家琳",
+        intro : "大家好～我是外联部部长Emily。北京妹子。\
+        平时喜欢玩游戏、唱歌、逛街、喝奶茶、吃甜点、做美食攻略+打卡网红餐厅！\
+        希望未来的一年能和CSSS一起组织更多有趣的活动(*¯︶¯*)",
+        img : fengjialin
       },
       {
-        name : "刘舒扬",
-        intro : "hi，我是刘舒扬Leon，大二，来自北京，故乡成都。目前打算Econ&Bio Major。\
-        人生理想是变得巨厉害。最喜欢吃teriyaki味的东西。未来一年想在CSSS做好外联部本职工作，\
-        和夏村的大家过的开开心心顺顺利利 :)",
-        img : liushuyang
+        name : "李润玖",
+        intro : "大家好！我是来自大连的李润玖，喜欢吃米线和火锅，最喜欢的就是在各种地方躺着，\
+        目前的专业是stat，擅长把自己的照片妙手回春，\
+        希望在CSSS的时间里能帮到大家，和大家快乐相处！！",
+        img : lirunjiu
       },
       {
-        name : "Emily Feng",
-        intro : "喜欢摄影，喜欢绘画，喜欢零食，喜欢CSSS",
-        img :  emilyfeng
+        name : "杨鸿嘉",
+        intro : "大家好！我是来自上海的杨鸿嘉，准备读国际关系和统计专业。\
+        我的爱好是游泳、骑行、看书、还有逛博物馆&填词，是个星战粉。\
+        希望未来能在外联部和夏村的华人群体以及驻美的中国使领馆多多联络，期待与大家的合作！",
+        img :  yanghongjia
       },
       {
-        name : "费爱雯",
-        intro : "今年大一 来自北京 专业暂定precomm和psych 什么都爱吃 希望能在CSSS和大家一起成长！",
-        img : feiaiwen
+        name : "沈彦苇",
+        intro : "大噶好，我是外联部的沈彦苇，来自上海。\
+        意向专业是media studies/pre-comm/WGS，对humanities相关也都很感兴趣。\
+        平时喜欢看展、看老电影看剧、戏剧、听英摇，有时也会打打网球练练琴，\
+        最近多了一个新爱好是拍胶片，希望可以和小伙伴们在秋日的上海一起骑行一起扫街呀。\
+        我也喜欢盘唱片，欢迎一起去淘碟！\
+        很高兴可以加入CSSS这个大家庭，也期待和大家一起合作共同成长！",
+        img : shenyanwei
       },
       {
-        name : "吕楚源",
-        intro : "北京人，pre-comm或传媒，爱好宅着刷综艺B站。\
-        喜欢吃一切辣的和妈妈做的饭。希望在CSSS努力工作，服务大家，自我提升，和大家成为好朋友。",
-        img : lvchuyuan
+        name : "王诗淇",
+        intro : "大家好我是来自深圳的王小皮，热衷于喝无糖奶茶减肥瘦身，\
+        最喜欢的电影是《布达佩斯大饭店》，爱好拍拍胶片画个画，还很喜欢坐过山车，\
+        大二了依然还是undecided（大概是psyc+stats+art minor），\
+        希望能跟CSSS的成员们一起做让大家和我们自己都喜欢的事！",
+        img : wangshiqi
       },
       {
         name : "仇启赟",
