@@ -54,117 +54,32 @@ import wangshiqi from "../assets/images/csss2020/外联部/王诗淇.jpeg"
 import lirunjiu from "../assets/images/csss2020/外联部/李润玖Renny.jpeg"
 import luojiayi from "../assets/images/csss2020/外联部/罗嘉仪.jpeg"
 
+import 
+
 class CouncilTeam extends Component{
   councilProfile = []
   render(){
     const council = [
       {
         title:"主席",
-        name:"汪文谦",
-        intro:"来自北京，阿森纳/摇滚/韩式料理，不擅长写论文的文科生，在经济与国际关系双专业压榨下努力生活。\
-        非常感恩过去在csss中的成长与收获，希望同大家带领csss走到一个新的高度。",
-        img:wangwenqian
+        name:"郇宇欣",
+        intro:"Hihi,郇宇欣Jennifer，来自北京，是一个大一到大三在三个不同大学里度过的大四学生。\
+        专业经济统计，辅修韩语。平时喜欢在屋子里看韩剧，看吃播，看做饭视频。梦想是有朝一日去遍世间上六所迪士尼！\
+        希望最后一年可以好好熟悉一下村子！",
+        img:
       },
       {
-        title:"内务副主席",
-        name:"漆泓阳",
-        intro:"各位认识的以及不认识的朋友们大家好。我叫漆泓阳Arthur，来自林城贵阳，和老干妈以及我兄弟茅台同乡。\
-        现在大三，专业是Foreign Affair和Economics，Minor日语。从大一来到UVA以来，我就一直是CSSS的一员。\
-        这三年从活动部的部员做到部长，再到现在的内务副主席位置，我也参与和举办了大大小小的活动，经历虽说宝贵，但最令我珍惜的还是过去两年的回忆。\
-        今年虽说没有办法返回夏村，带新生们体验UVA的校园生活，但我们依然希望可以在丰富同学们的的课余生活，举办各种活动的同时，结交更多的朋友。\
-        我也感激有这么多心系UVA华人团体的同学可以一同加入CSSS这个大家庭，希望我在CSSS的第三年，在各位的陪伴下，可以收获更多，让CSSS越来越多元，越来越好。\
-        （然后兴趣爱好是忙里偷闲，时而小酌，感兴趣的朋友请私聊我）",
-        img:qihongyang
-      },
-      {
-        title:"外务副主席",
-        name:"王梦辰",
-        intro:"大家好，我是来自天津的王梦辰Veronique，CS和Statistics double major。喜欢kpop和旅行。\
-        希望在新的一年里和CSSS一起带给大家更多更好的活动！",
-        img:wangmengchen
+        title:"副主席",
+        name:"冯家琪",
+        intro:"哈喽🌟🌟，我是冯家琪Sara~接下来的学年中会在CSSS担任副主席的职位。希望在新的一学年中和CSSS共同进步，继续为同学们设计出最棒的活动～",
+        img:
       },
       {
         title:"秘书",
-        name:"陈羽芊",
-        intro:"大家好，我是来自杭州的陈羽芊。专业是psyc和日语。喜欢撸猫撸狗看番看剧。本命美剧是Sense8，喜欢HP系列电影（今年的学院杯属于斯莱特林！）\
-        希望能在CSSS带着大家好好工作好好玩。希望可以在今年这个大家都难的事态下尽自己的一份力。",
-        img:chenyuqian
+        name:"朱揭率",
+        intro:"大家好，我叫Christian朱揭率，来自上海和新加坡，今年大二，计划修读数学和金融系。我平时喜欢旅行、国际象棋、弹琴、徒步和打王者。我还喜欢读小说，尤其是硬科幻和玄幻小说。作为秘书，我希望能在CSSS这个大家庭认识到更多的小伙伴，和大家一起为夏村的华人服务。祝大家新的一年一起学业进步，吃好玩好学好！",
+        img:
       },
-      {
-        title:"文化部部长",
-        name:"冯家琪",
-        intro:"大家好呀，我是冯家琪Sara，来自北京朝阳。专业是Computer Science 和 Statistics。\
-        曾经的网瘾少女，但目前最喜欢的是窝在沙发上发呆喝ice tea，刷综艺动漫日剧。\
-        擅长的事是熬夜肝码，拉着大家一起团建。喜欢读各种类型的书，更喜欢硬科幻。\
-        希望新的一年大家学好玩好，和CSSS一起变得更好。",
-        img:fengjiaqi
-      },
-      {
-        title:"文化部部长",
-        name:"郇宇欣",
-        intro:"大家好，我是郇宇欣 Jennifer。来自北京 2022届 econ major。我的爱好是听Kpop 看物料。\
-        我喜欢吃各种各样的美食。我喜欢小猫咪，可惜我家里不能养猫。希望在接下来的一年里跟大家一起举办各种各样有趣有意义的活动。谢谢大家～",
-        img:xunyuxin
-      },
-      {
-        title:"活动部部长",
-        name:"胡淇媛",
-        intro:"我是lizzy，个人爱好在美食小说番剧游戏漫画间反复横跳，间歇性神经质但我真的是个好人！我来自武汉，有谁想去武汉观光可以找我哦www \
-        很高兴今年还能留在csss，希望能和大家一起努力，继续给大家带来有趣的活动！",
-        img:huqiyuan
-      },
-      {
-        title:"活动部部长",
-        name:"刘澍泽",
-        intro:"Hi，我叫刘澍泽，来自太原，专业是理论计算机的博弈论，爱好健身滑雪Roadtrip，希望在CSSS认识到更多的小伙伴，大家一起玩耍。",
-        img:liushuze
-      },
-      {
-        title:"宣传部部长",
-        name:"毕思瑶",
-        intro:"Hello大噶好，这里是来自四川的小妖毕思瑶～新的一年也希望和CSSS的大家一起努力一起进步～",
-        img:bisiyao
-      },
-      {
-        title:"宣传部部长",
-        name:"郭锦琳",
-        intro:"我来自厦门 专业统计经济 喜欢吃和睡觉 希望csss新的一年 冲就是了",
-        img:guojinlin
-      },
-      {
-        title:"外联部部长",
-        name:"冯家琳",
-        intro:"大家好～我是外联部部长Emily。北京妹子。平时喜欢玩游戏、唱歌、逛街、喝奶茶、吃甜点、做美食攻略+打卡网红餐厅！\
-        希望未来的一年能和CSSS一起组织更多有趣的活动(*¯︶¯*)",
-        img:fengjialin
-      },
-      {
-        title:"外联部部长",
-        name:"王小皮",
-        intro:"大家好我是今年担任外联部部长的王小皮，是个不会说太粤语但喜欢喝早茶的深圳人。\
-        平常的爱好有猫猫，摄影画画，烫头染头，看着我朋友做饭，听十年前的粤语歌，和坐过山车。\
-        虽然照片里我头发花里胡哨（是@宣传部长bsy拍的），但我人很好相处的！希望能为csss贡献自己的力量啦，新的一年大家一起变得更好",
-        img:wangxiaopi
-      },
-      {
-        title:"科技部部长",
-        name:"龙玟君",
-        intro:"武汉人，专业CS和Psyc，爱好二次元、音乐剧和涂鸦。希望新的一年继续在CSSS快乐肝码和认识许多小伙伴！",
-        img:longwenjun
-      },
-      {
-        title:"财务部部长",
-        name:"张丹妍",
-        intro:"来自北京，喜欢吃饭和睡觉 偏爱甜食 : )",
-        img:zhangdanyan
-      },
-      {
-        title:"职业发展部部长",
-        name:"仇启贇",
-        intro:"来自上海，在波士顿读了四年美高，现在已经是大三的阿姨了… \
-        喜欢音乐和研究好吃的东西，欢迎大家来我家蹭饭！CSSS新的一年也要🐛🐛🐛",
-        img:chouqiyun
-      }
     ]
     for(var i = 0; i < council.length; i++){
       this.councilProfile.push(
@@ -183,49 +98,44 @@ class PublicityTeam extends Component{
   render(){
     const publicity = [
       {
-        name : "王艺霖",
-        intro : "我来自上海，专业是media studies和econ，喜欢快乐养生，\
-        希望新的一年在宣传部继续让CSSS冲出地球登上月球。",
-        img : wangyilin
+        name : "马子纯",
+        intro : "Hello大家好~我是2024文理学院的马子纯。平时喜欢看电影听音乐，有好吃的就会爆开心。可佛可蹦可运动可random walk（不过今年住在IRC每天一万步起步我已经要倦了）。很高兴今年可以和一群超可爱的小伙伴在CSSS一起进步！",
+        img : 
       },
       {
-        name : "张馨月",
-        intro : "大家好，我来自香港，专业是CS和Economics。\
-        最大的爱好就是尝试新鲜的菜谱做饭给大家吃！\
-        希望这一年可以和宣传部各位厉害的部员们，向大家呈现更多有趣创新的作品！",
-        img : zhangxinyue
+        name : "夏之涵",
+        intro : "hello，我是夏之涵，今年大二，专业是pre-comm，平时热爱文学、围棋、篮球和足球。新的一年希望和csss一起成长！",
+        img : 
       },
       {
-        name : "毕思瑶",
-        intro : "来自四川，喜欢小裙子的猛男。日常就是打打架画画弹弹钢琴。\
-        接下来的一年希望各位神仙带我打怪升级。",
-        img : bisiyao
+        name : "李坤宇",
+        intro : "我叫李坤宇Jeffery，2024届文理学院，意向专业是经济&统计。业余时间，我喜欢打篮球、弹吉他、写书法。在未来的一年里，希望和各位同学一起学习，希望与CSSS共同成长。",
+        img : 
       },
       {
-        name : "郭锦琳",
-        intro : "我来自厦门，专业是统计，爱好是韩剧，\
-        人生理想是一夜暴富，最爱吃的东西是猪排饭。\
-        未来一年在csss希望能更多锻炼自己的工作能力，离一夜暴富更进一步。",
-        img : guojinlin
+        name : "宋致远",
+        intro : "Hello大家好呀！我是25届的宋致远Allen，来自浙江宁波。目前打算major stat & minor data science。平时（不写作业的时候）喜欢刷刷b站看看番，偶尔打打游戏，偶尔emo。会经常出没在afc健身房，欢迎偶遇哈哈哈哈哈～宣传方面的话，会做视频剪辑和前期的拍摄，公众号排版也挺ok。乐于尝试一切未曾尝试过的事情！",
+        img :
       },
       {
-        name : "金荻",
-        intro : "我是一个住在广州的北京人，专业暂时是传媒。\
-        爱好有唱 rap 篮球 没有跳，还喜欢健身足球跟体育有关的都喜欢！\
-        吃麻麻香！这是我第一年加入CSSS的宣传部希望干一票大的！冲！",
-        img : jindi
+        name : "陈语",
+        intro : "Hiiii大噶好：D 我是25届的陈语Serena，来自浙江。想学econ和（？）。家里有橘猪Teemo和奶牛猫Sona，梦想是未来能养一只萨摩椰耶耶！最近喜欢的事情是逛超市、弹钢琴、游泳和打球。很高兴能加入CSSS大家庭，希望能在宣传部做出有意义的事情！",
+        img : 
       },
       {
-        name : "王金益",
-        intro : "来自山东，建筑学院的MLA项目研究生。唱歌跳舞画画都喜欢，\
-        未来一年希望在这里玩得开心，为社团做一些有价值的事情。",
-        img : wangjinyi
+        name : "李羚婧",
+        intro : "大家好！我是宣传部的新成员李羚婧Joanna。因为我特别喜欢电影和其他media所以特别荣幸能和大家在这个部门共事。我有一点社恐，但很好相处！如果你也喜欢看电影什么的请大力dd我！",
+        img : 
       },
       {
-        name : "张宁欣",
-        intro : "深圳人，想学数学，喜欢打篮球网球羽毛球，大家喜欢的我都喜欢吃。\
-        希望把csss变得更厉害！大半夜的我文笔不是很好…人生理想就是活得开心，希望你也开心。",
-        img : zhangningxin
+        name : "刘彦君",
+        intro : "Hi我是Grace刘彦君，初来乍到的纯正undecided人，major还没头绪minor已经想好一万个。同时也是又菜又爱玩的各种桌游玩家，偶尔画点小画，平时喜欢研究食堂怎么乱配一通才能好吃。",
+        img :
+      },
+      {
+        name : "郑笑东",
+        intro : "赶due摸鱼样样行，翘课滑雪第一名。",
+        img : 
       },
     ]
     for(var i = 0; i < publicity.length; i++){
@@ -398,16 +308,23 @@ class FinanceTeam extends Component{
     const finance  = [
       {
         name:"张丹妍",
-        intro:"来自北京，喜欢吃饭和睡觉 偏爱甜食 : )",
-        img:zhangdanyan
+        intro:"大家好，我是2023届的张丹妍 Jessica，major econ+math 平时喜欢睡觉 看电影 吃饼干 喝茶 和 发呆",
+        img:
       },
       {
-        name : "宋莉嘉",
-        intro : "大家好吖，我是宋莉嘉Lillian2024er，来自成都，性别女爱好吃，\
-        想要major in ECON & STAT（但现在并没有很自信可以double major，平常喜欢和大家一起唠嗑，\
-        到处走走逛逛，接受各种安利，比较佛系生活～加入CSSS也是希望可以把中国留学生们connect起来给大家在异国他乡带来家的感觉，\
-        努力做他们坚强的后盾。",
-        img : songlijia
+        name : "彭颖君",
+        intro : "Hi大家好我是Jamilla彭颖君 文理大一 意向专业是Global Studies和Econ 喜欢画画 干饭 玩游戏 听歌 睡觉 聊天～",
+        img : 
+      },
+      {
+        name : "陈梓安",
+        intro : "What is up! 我是2025届的陈梓安Clarence，江苏苏州人。目前的意向专业是mathematics with financial concentration，可能会double Econ或者stats。是一名典型的射手以及esfp。课余时间会做一些体育活动，比如打篮球踢足球，足球主队是切尔西。平时也会听音乐，比较喜欢EDM以及rap，喜欢的rapper有J Cole和Kendrick Lamar。最近还喜欢上了打碟，是一位新手DJ。很荣幸能加入CSSS为大家服务。",
+        img : 
+      },
+      {
+        name : "董兆洋",
+        intro : "大家好，我是董兆洋Eric，来自昆明。我是大一新生，目前就读于弗吉尼亚大学的college of Art&Science。我今年刚刚加入CSSS财务部。我平时喜欢踢球，下棋，会弹吉他。我还很喜欢旅游，去过一些国家，希望以后能去到更多地方。",
+        img : 
       },
     ]
     for(var i = 0; i < finance.length; i++){
@@ -530,6 +447,7 @@ class TechTeam extends Component{
   }
 }
 
+
 class TeamMenu extends Component {
   state = { activeItem: 'home' }
 
@@ -632,3 +550,5 @@ const Profile = ({title, name, intro, img}) =>(
 
 
 export default TeamPage;
+
+// lalala
